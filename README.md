@@ -20,9 +20,9 @@ Conquistas:
 Na internet tem muitas informações, porem sempre tem algo especifico que não achamos de jeito nenhum, passei por isso quando tive que criar uma função para adicionar tarefas, não encontrei nada em nenhum lugar, e tive que pensar e codar. No final deu tudo certo!
 
 
-Link do projeto Rodando:
+Link do projeto Rodando: https://donatrello.herokuapp.com/
 
-Link do Código no GitHub:
+Link do Código no GitHub: https://github.com/Rafael-coder-sudo/donaTrello--frontend/
 
 Conclusão: Foi ótimo trabalhar nesse projeto, pois aprendi varios conceitos interessante, além de praticar nos que eu já conhecia, espero por mais desafios assim, pois é a conclução deles, que me motiva para continuar contruindo minha carreira na area!
 
