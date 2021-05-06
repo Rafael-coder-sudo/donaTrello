@@ -1,91 +1,48 @@
 export function loadLists() {
   return [
     { 
-      title: 'Todo', 
+      title: 'Pendência', 
+      creatable: true,
       cards: [
         {
           id: 1,
-          title: "Estudar node",
-          content: 'Estudar módulo 01 de NodeJS',
-          tags: ['#f44336', '#4caf50', '#ffc107'],
+          title: "Contas",
+          content: 'Pagar contas de Luz e agua.',
+          tags: ['#f44336'],
         },
         {
           id: 2,
-          title: "Criar Video",
-          content: 'Criar vídeo para o Youtube',
-          tags: ['#f44336', '#4caf50', '#ffc107']
+          title: "Lavar Louça",
+          content: 'Lavar para não apanhar da esposa.',
+          tags: ['#4caf50'],
         },
+        
       ]
     },
     { 
-      title: 'Doing',
+      title: 'Fazendo',
       cards: [
         {
           id: 3,
-          title: "Estudar React",
-          content: 'Recriando clone do Trello',
-          tags: ['#f44336', '#4caf50', '#ffc107']
+          title: "Projeto",
+          content: 'Dando o maximo no projeto.',
+          tags: ['#ffc107']
           
         },
-        {
-          id: 3,
-          title: "Estudar React",
-          content: 'Recriando clone do Trello',
-          tags: ['#f44336', '#4caf50', '#ffc107']
-        },
-        {
-          id: 3,
-          title: "Estudar React",
-          content: 'Recriando clone do Trello',
-          tags: ['#f44336', '#4caf50', '#ffc107']
-        },
-        {
-          id: 3,
-          title: "Estudar React",
-          content: 'Recriando clone do Trello',
-          tags: ['#f44336', '#4caf50', '#ffc107']
-        },
-        {
-          id: 3,
-          title: "Estudar React",
-          content: 'Recriando clone do Trello',
-          tags: ['#f44336', '#4caf50', '#ffc107']
-        },
-        {
-          id: 3,
-          title: "Estudar React",
-          content: 'Recriando clone do Trello',
-          tags: ['#f44336', '#4caf50', '#ffc107']
-        },
-        {
-          id: 3,
-          title: "Estudar React",
-          content: 'Recriando clone do Trello',
-          tags: ['#f44336', '#4caf50', '#ffc107']
-        },
+        
+        
       ]
     },
     { 
-      title: 'Doin',
+      title: 'Feito',
       cards: [
         {
           id: 4,
-          title: "Estudar React",
-          content: 'Recriando clone do Trello',
-          tags: ['#f44336', '#4caf50', '#ffc107']
+          title: "Enviar Projeto",
+          content: 'Enviar Projeto para Leo analisar!',
+          tags: ['#f44336']
         },
-        {
-          id: 5,
-          title: "Estudar Redux",
-          content: 'Ajustando Gerenciamento de estado',
-          tags: ['#f44336', '#4caf50', '#ffc107']
-        },
-        {
-          id: 6,
-          title: "Estudar MongoDb",
-          content: 'Ajustes nas tabelas ',
-          tags: ['#f44336', '#4caf50', '#ffc107']
-        }
+        
       ]
     },
   ];

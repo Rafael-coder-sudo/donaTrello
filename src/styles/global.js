@@ -1,3 +1,4 @@
+//Css para estilo Global!
 import { createGlobalStyle } from 'styled-components'
 
 export default createGlobalStyle`
@@ -13,7 +14,8 @@ export default createGlobalStyle`
   }
 
   body{
-    background: #757ce8;
+    background:#673ab7
+    ;
   }
 
 `;

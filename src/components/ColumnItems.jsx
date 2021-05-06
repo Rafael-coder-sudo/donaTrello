@@ -1,14 +1,19 @@
 //Componente referente as colunas!
-
 import React, { useState } from 'react'
 
+import produce from 'immer';
 
+import BoardContext from '../libs/context';
+//Arquivo de dados estático para Testes
+import { loadLists } from '../libs/tasks';
 import { ColumnsItem } from '../styles/utils'
-import CardItems from './CardItems'
-import ModalAdd from './ModalAdd'
+import List from './List'
 
-export default ({ data }) => {
+const data = loadLists();
 
+export default () => {
+
+  const [lists, setLists] = useState(data);
   const [show, onShow] = useState(false)
 
   //Função para abrir ou fechar modal de Adicionar Tarefa
@@ -16,25 +21,44 @@ export default ({ data }) => {
     onShow(!show)
   }
 
+  //Função para Mover ym cards
+  function move(fromList, toList, from, to) {
+    setLists(produce(lists, draft => {
+      const dragged = draft[fromList].cards[from];
+      draft[fromList].cards.splice(from, 1);
+      draft[toList].cards.splice(to, 0, dragged);
+      
+    }))
+  }
+
+  //Função para Remover um cards
+  function remove(fromList, from){
+    setLists(produce(lists, draft => {
+      const dragged = draft[fromList].cards[from];
+      draft[fromList].cards.splice(from, 1);
+    }))
+  }
+
+  //Função para Adicionar um Card
+  function add(title, desc,tag){
+    
+    setLists(produce(lists, draft => {
+      const dragged = {
+        id: 1,
+        title: `${title}`,
+        content: `${desc}`,
+        tags: [`${tag}`],
+      }
+      draft[0].cards.splice(0, 0, dragged);
+    }))
+    }
 
   return (
-    <ColumnsItem>
-      <div className="d-flex justify-content-between">
-        <h4>{data.title}</h4>
-        <icon className="fa fa-plus" onClick={() => showOrHidden()}></icon>
-        <ModalAdd
-          show={show}
-          close={showOrHidden} />
-      </div>
-
-      {/*Map para Listar todos os dados das tasks*/}
-      {data.cards.map(card =>
-        <CardItems
-          key={card.id}
-          title={card.title}
-          desc={card.content}
-          tags={card.tags} />
-      )}
-    </ColumnsItem>
-  )
+    <BoardContext.Provider value={{ lists, move,remove, add }}>
+      <ColumnsItem>
+      {lists.map((list, index) => <List key={list.title} index={index} data={list} showOrHidden={showOrHidden} 
+      show={show} />)}
+      </ColumnsItem>
+    </BoardContext.Provider>
+  );
 }

@@ -13,7 +13,7 @@ export const Header = Styled.header`
   justify-content: center;
   align-items: center;
   font-size: 49px;
-  color: #002884;
+  color: white;
 `
 
 export const CardItem = Styled.div`
@@ -33,7 +33,7 @@ export const CardItem = Styled.div`
 `
 
 export const TitleItem = Styled.p`
-
+  margin-top: 20px;
   font-size: 20px;
   font-family: 'Itim', cursive;
   color: #002884;
@@ -53,25 +53,49 @@ export const TagItem = Styled.div`
 
 `
 export const ColumnsItem = Styled.div`
-  width: 285px;
-  background: rgba(255,255,255,.3);
-  padding: 10px;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px;
+  display: flex;
+  padding: 30px 0;
   height: calc(100vh - 80px);
+  
+`
+
+export const ContainerCard = Styled.div`
+  padding: 0 15px;
+  height: 100%;
+  flex: 0 0 280px;
+  border-radius: 4px;
+  background: rgba(255,255,255,.3);
+  margin: 10px;
   overflow-y: scroll;
   ::-webkit-scrollbar-track {
     background-color: #F4F4F4;
-}
-::-webkit-scrollbar {
+  }
+  ::-webkit-scrollbar {
     width: 6px;
     background: #F4F4F4;
-}
-::-webkit-scrollbar-thumb {
+  }
+  ::-webkit-scrollbar-thumb {
     background: #002884;
-}
-`
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 42px;
+
+    h2 {
+      font-weight: 500;
+      font-size: 16px;
+      padding: 0 10px;
+    }
+
+  }
+
+  ul {
+    margin-top: 30px;
+  }
+  
+`;
 
 export const TagsFields = Styled.div`
   border: 1px solid #c3c3c3;
